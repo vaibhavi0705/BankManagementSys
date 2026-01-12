@@ -155,10 +155,10 @@ public class signUp extends JFrame implements ActionListener {
         labelPinCode.setBounds(100,590,200,30);
         add(labelPinCode);
 
-        textState = new JTextField();
-        textState.setFont(new Font("Raleway", Font.BOLD ,14));
-        textState.setBounds(300,590,400,30);
-        add(textState);
+        textPinCode = new JTextField();
+        textPinCode.setFont(new Font("Raleway", Font.BOLD ,14));
+        textPinCode.setBounds(300,590,400,30);
+        add(textPinCode);
 
         JLabel labelState = new JLabel("State :");
         labelState.setFont(new Font("Raleway", Font.BOLD ,20));
@@ -200,6 +200,55 @@ public class signUp extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        String formno = first;
+        String name = textName.getText();
+        String fname = textFName.getText();
+        String dob = ((JTextField) dateChooser.getDateEditor().getUiComponent()).getText();
+        String gender = null;
+        if(r1.isSelected()){
+            gender = "Male";
+        }else if(r2.isSelected()){
+            gender = "Female";
+        }else if(r3.isSelected()){
+            gender = "Other";
+        }
+        String email = textEmail.getText();
+        String maritial = null;
+        if(r4.isSelected()){
+            maritial = "Married";
+        }else if(r5.isSelected()){
+            maritial = "Unmarried";
+        }else if(r6.isSelected()){
+            maritial = "Other";
+        }
+        String address = textAddress.getText();
+        String city = textCity.getText();
+        String pincode = textPinCode.getText();
+        String state = textState.getText();
+
+        try{
+            if(textName.getText().trim().isEmpty() ||
+                textFName.getText().trim().isEmpty() ||
+                textEmail.getText().trim().isEmpty() ||
+                textAddress.getText().trim().isEmpty() ||
+                textCity.getText().trim().isEmpty() ||
+                textPinCode.getText().trim().isEmpty() ||
+                textState.getText().trim().isEmpty()){
+                JOptionPane.showMessageDialog(null, "fill all the feilds");
+                return;
+            }else{
+                connection con1 = new connection();
+                String query = "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+maritial+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
+                con1.statement.executeUpdate(query);
+                new signup2();
+                setVisible(false);
+                
+            }
+
+        }catch (Exception E){
+            E.printStackTrace();
+        }
 
     }     
     public static void main(String[] args){
