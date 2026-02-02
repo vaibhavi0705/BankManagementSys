@@ -1,18 +1,90 @@
-## Getting Started
+# 🏦 Java Bank Management System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A desktop-based Bank Management System built using **Java** and **MySQL**.  
+This project focuses on basic banking operations with database connectivity and user authentication.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🚀 Features
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- User Sign Up  
+- User Login  
+- MySQL Database Integration  
+- Form Validation  
+- JDBC Connectivity  
+- Java Swing UI  
+- Image/Icon based interface  
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🛠 Tech Stack
 
-## Dependency Management
+- Java (Core + Swing)  
+- MySQL  
+- JDBC  
+ 
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## 📂 Project Structure
+src/
+└── bankSystem/
+├── Login.java
+├── connection.java
+├── signUp.java
+├── signup2.java
+└── signup3.java
+
+icon/
+├── atm2.png
+├── backbg.png
+├── bank.png
+├── card.png
+└── provider.png
+
+
+---
+
+## ⚙️ How to Run
+
+1. Clone the repository  
+2. Open project in Vs code  
+3. Add MySQL JDBC Connector to Build Path  
+4. Create MySQL database  
+5. Update database credentials in `connection.java`  
+6. Run `Login.java`
+
+---
+
+
+## 📚 Libraries Used
+
+- MySQL Connector/J  
+- JCalendar  
+
+---
+
+## ⭐ Learning Outcome
+
+- Java GUI development  
+- JDBC connectivity  
+- MySQL integration  
+- Backend logic  
+- Project structuring  
+- Debugging real-world applications  
+
+---
+
+## 👩‍💻 Author
+
+Vaibhavi Subhash Gunjalkar  
+3rd Year Engineering Student  
+
+---
+
+### 🔹 Note
+
+This project was built as part of my learning journey using online resources and hands-on practice.
+
+
+
