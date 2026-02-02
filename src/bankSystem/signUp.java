@@ -77,20 +77,20 @@ public class signUp extends JFrame implements ActionListener {
         add(labelG);
 
         r1 = new JRadioButton("Male");
-        r1.setBackground(new Color(222,255,228));
+        r1.setBackground(new Color(218, 196, 247));
         r1.setFont(new Font("Raleway", Font.BOLD ,14));
         r1.setBounds(300,290,60,30);
         add(r1);
 
         r2 = new JRadioButton("Female");
-        r2.setBackground(new Color(222,255,228));
+        r2.setBackground(new Color(218, 196, 247));
         r2.setFont(new Font("Raleway", Font.BOLD ,14));
         r2.setBounds(425,290,90,30);
         add(r2);
 ;
 
         r3 = new JRadioButton("Other");
-        r3.setBackground(new Color(222,255,228));
+        r3.setBackground(new Color(218, 196, 247));
         r3.setFont(new Font("Raleway", Font.BOLD ,14));
         r3.setBounds(550,290,90,30);
         add(r3);
@@ -113,19 +113,19 @@ public class signUp extends JFrame implements ActionListener {
         add(labelMarried);
 
         r4 = new JRadioButton("Married");
-        r4.setBackground(new Color(222,255,228));
+        r4.setBackground(new Color(218, 196, 247));
         r4.setFont(new Font("Raleway", Font.BOLD ,14));
         r4.setBounds(300,440,90,30);
         add(r4);
 
         r5 = new JRadioButton("Unmarried");
-        r5.setBackground(new Color(222,255,228));
+        r5.setBackground(new Color(218, 196, 247));
         r5.setFont(new Font("Raleway", Font.BOLD ,14));
         r5.setBounds(425,440,110,30);
         add(r5);
 
         r6 = new JRadioButton("Other");
-        r6.setBackground(new Color(222,255,228));
+        r6.setBackground(new Color(218, 196, 247));
         r6.setFont(new Font("Raleway", Font.BOLD ,14));
         r6.setBounds(550,440,90,30);
         add(r6);
@@ -191,7 +191,7 @@ public class signUp extends JFrame implements ActionListener {
 
 
 
-        getContentPane().setBackground(new Color(222,255,228));
+        getContentPane().setBackground(new Color(218, 196, 247));
         setLayout(null);
         setSize(850,800);
         setLocation(360,40);
@@ -241,7 +241,7 @@ public class signUp extends JFrame implements ActionListener {
                 connection con1 = new connection();
                 String query = "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+maritial+"','"+address+"','"+city+"','"+pincode+"','"+state+"')";
                 con1.statement.executeUpdate(query);
-                new signup2();
+                new signup2(first);
                 setVisible(false);
                 
             }
